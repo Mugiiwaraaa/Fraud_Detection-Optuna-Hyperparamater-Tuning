@@ -33,6 +33,8 @@ Since we have taken care of the imbalanced issue, we can evaluate the model usin
 I tried eight different classifiers with a cross-validation approach that resamples different portions of the data to test and train a model on different iterations.This maintains the randomness and avoids any bias towards any specific samples. <br>
 After 10 iterations, the LGBM , RF, DT and XGB classifiers have performed relatively better than the other as ensemble and tree structured algorithms tend to perform better. My goal was to utilize the Optuna Hyperparamater framework to hypertune a more complex model, hence I chose the LGBM .model 
 
+![](model_results.png)
+
 ## Optuna Hyperparameter Tuning 
 Most of the LGBM paraemeters overlap and trying to manually find the most efficient parameters can be a big mistake causing overfitting. Therefore we rely on a hyperparameter tuning framework such as Optuna.
 
@@ -41,3 +43,5 @@ Other opimization tools for tuning parameters like GridSearchCV or RandomizedSea
 
 ## Model Performance ##
 After Finding the best Hyperparameters and Tuning our LGBM Classifier the overall accuracy and the F1 score increased on the Test data.
+
+![](cf_matrix.png)
